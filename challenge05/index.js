@@ -18,15 +18,7 @@ getText();
 function separateValues(array) {
     let hiddenMessage = '';
     for (let i = 0; i < array.length; i++) {
-        const usuario = array[i];
-        const [id, username, email, age, location] = usuario.split(',');
-        // console.log(`ID: ${id}, USERNAME: ${username}, EMAIL: ${email}, AGE: ${age}, LOCATION: ${location}`);
-        //console.log(usuario, i);
-        checkID(id);
-        checkUsername(username);
-        checkEmail(email);
-        checkAge(age);
-        checkLocation(location);
+        const [id, username, email, age, location] = array[i].split(',');
         if (!checkID(id) || !checkUsername(username) || !checkEmail(email) || !checkAge(age) || !checkLocation(location)) {
             hiddenMessage += username[0];
         }
